@@ -1,0 +1,79 @@
+openapi: 3.1.0
+info:
+  title: Regel OUL API
+  version: 1.0.0
+  description: >
+    Gemensamt API för regeltyper som hanterar OUL-uppgifter (manuell och komplettering).
+    Innehåller endpoints som är identiska för alla OUL-hanterande regelimplementationer.
+
+paths:
+  /utokadUppgiftsbeskrivning:
+    get:
+      tags: [RegelOulController]
+      operationId: getUtokadUppgiftsbeskrivning
+      summary: Hämta utökad beskrivning av uppgift
+      responses:
+        "200":
+          description: Hämtning av utökad uppgiftsbeskrivning slutförd OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GetUtokadUppgiftsbeskrivningResponse"
+
+  /{handlaggningId}/done:
+    post:
+      tags: [RegelOulController]
+      operationId: markDone
+      summary: Slutför OUL-kontroll
+      description: Markerar ett handläggningsärende som färdigbehandlat och avslutar OUL-uppgiften
+      parameters:
+        - name: handlaggningId
+          in: path
+          required: true
+          description: ID för handläggningsärendet
+          schema:
+            type: string
+            format: uuid
+      responses:
+        "204":
+          description: Kontroll slutförd OK och OUL-uppgift avslutad
+        "207":
+          description: >
+            Kontroll slutförd och regelkörning triggad, men avslutning
+            av OUL-uppgiften misslyckades — uppgiften kan fortfarande visas
+            som öppen
+        "404":
+          description: Informationen hittades inte
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "409":
+          description: >
+            Timeout har redan tömt korrelationstillståndet — kontrollen
+            kan inte längre registreras
+        "422":
+          description: Yrkandet är fortfarande ofullständigt
+
+components:
+  schemas:
+    ErrorResponse:
+      type: object
+      required:
+        - code
+        - message
+      properties:
+        code:
+          type: integer
+          description: HTTP-statuskod
+          example: 404
+        message:
+          type: string
+          description: Beskrivning av felet
+          example: Handläggningsärendet hittades inte
+
+    GetUtokadUppgiftsbeskrivningResponse:
+      type: object
+      properties:
+        beskrivning:
+          type: string
