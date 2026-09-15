@@ -37,11 +37,6 @@ paths:
       responses:
         "204":
           description: Kontroll slutförd OK och OUL-uppgift avslutad
-        "207":
-          description: >
-            Kontroll slutförd och regelkörning triggad, men avslutning
-            av OUL-uppgiften misslyckades — uppgiften kan fortfarande visas
-            som öppen
         "404":
           description: Informationen hittades inte
           content:
