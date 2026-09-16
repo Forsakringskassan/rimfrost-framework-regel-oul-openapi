@@ -1,3 +1,9 @@
+## 0.0.2 (2026-09-16)
+
+### Bug Fixes
+
+-  Use ErrorResponse for all /done error codes ([17113](https://github.com/Forsakringskassan/rimfrost-framework-regel-oul-openapi/commit/17113b0d5d2cf01) Lars Persson)  
+
 # rimfrost-framework-regel-oul-openapi changelog
 
 Changelog of rimfrost-framework-regel-oul-openapi.
