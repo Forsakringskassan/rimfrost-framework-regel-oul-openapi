@@ -47,8 +47,17 @@ paths:
           description: >
             Timeout har redan tömt korrelationstillståndet — kontrollen
             kan inte längre registreras
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
         "422":
           description: Yrkandet är fortfarande ofullständigt
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+
 
 components:
   schemas:
