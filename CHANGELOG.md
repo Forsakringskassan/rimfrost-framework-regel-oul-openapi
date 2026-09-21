@@ -1,3 +1,9 @@
+## 0.0.3 (2026-09-21)
+
+### Bug Fixes
+
+-  **deps**  update dependency org.openapitools:jackson-databind-nullable to v0.2.11 ([f5cd3](https://github.com/Forsakringskassan/rimfrost-framework-regel-oul-openapi/commit/f5cd3aa1ef834c6) renovate[bot])  
+
 ## 0.0.2 (2026-09-16)
 
 ### Bug Fixes
