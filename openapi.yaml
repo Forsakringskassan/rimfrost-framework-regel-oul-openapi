@@ -6,6 +6,9 @@ info:
     Gemensamt API för regeltyper som hanterar OUL-uppgifter (manuell och komplettering).
     Innehåller endpoints som är identiska för alla OUL-hanterande regelimplementationer.
 
+security:
+  - bearerAuth: []
+
 paths:
   /utokadUppgiftsbeskrivning:
     get:
@@ -19,6 +22,18 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/GetUtokadUppgiftsbeskrivningResponse"
+        "401":
+          description: Ej autentiserad
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "403":
+          description: Åtkomst nekad
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
 
   /{handlaggningId}/done:
     post:
@@ -37,6 +52,18 @@ paths:
       responses:
         "204":
           description: Kontroll slutförd OK och OUL-uppgift avslutad
+        "401":
+          description: Ej autentiserad
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "403":
+          description: Åtkomst nekad
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
         "404":
           description: Informationen hittades inte
           content:
@@ -60,6 +87,12 @@ paths:
 
 
 components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      description: Bearer-token utfärdat av identitetsleverantören. Ramverket extraherar handläggarens identitet från token.
+
   schemas:
     ErrorResponse:
       type: object
