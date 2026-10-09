@@ -1,3 +1,20 @@
+## 0.0.4 (2026-10-09)
+
+### Bug Fixes
+
+-  **deps**  update dependency org.openapitools:jackson-databind-nullable to v0.2.12 ([d2db1](https://github.com/Forsakringskassan/rimfrost-framework-regel-oul-openapi/commit/d2db12b22832c81) renovate[bot])  
+
+### Dependency updates
+
+- pin forsakringskassan/.github action to bfb01f7 ([0003f](https://github.com/Forsakringskassan/rimfrost-framework-regel-oul-openapi/commit/0003f73982bf6fc) renovate[bot])  
+### Other changes
+
+**Add bearer auth security scheme and 401/403 responses**
+
+
+[fae68](https://github.com/Forsakringskassan/rimfrost-framework-regel-oul-openapi/commit/fae689ecd87db0a) Ulf Slunga *2026-10-07 08:37:07*
+
+
 ## 0.0.3 (2026-09-21)
 
 ### Bug Fixes
