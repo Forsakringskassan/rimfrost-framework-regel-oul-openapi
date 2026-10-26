@@ -1,3 +1,26 @@
+## 0.0.4 (2026-10-26)
+
+### Bug Fixes
+
+-  **deps**  update jackson monorepo to v2.22.4 ([dc226](https://github.com/Forsakringskassan/rimfrost-framework-regel-oul-openapi/commit/dc226bb9f1b0abe) renovate[bot])  
+-  **deps**  update jackson monorepo ([4e3af](https://github.com/Forsakringskassan/rimfrost-framework-regel-oul-openapi/commit/4e3af7e5f59b35a) renovate[bot])  
+-  **deps**  update dependency se.fk.gradle:gradle-conventions to v1.18.3 ([dab01](https://github.com/Forsakringskassan/rimfrost-framework-regel-oul-openapi/commit/dab0157481757ed) renovate[bot])  
+-  **deps**  update dependency org.openapitools:jackson-databind-nullable to v0.2.12 ([d2db1](https://github.com/Forsakringskassan/rimfrost-framework-regel-oul-openapi/commit/d2db12b22832c81) renovate[bot])  
+
+### Dependency updates
+
+- update gradle to v9.8.2 ([ae790](https://github.com/Forsakringskassan/rimfrost-framework-regel-oul-openapi/commit/ae790c1addf0cb6) renovate[bot])  
+- update forsakringskassan/.github digest to cbd74f1 ([cbaed](https://github.com/Forsakringskassan/rimfrost-framework-regel-oul-openapi/commit/cbaed81c023406b) renovate[bot])  
+- update gradle to v9.8.1 ([62115](https://github.com/Forsakringskassan/rimfrost-framework-regel-oul-openapi/commit/62115b7cb49a208) renovate[bot])  
+- pin forsakringskassan/.github action to bfb01f7 ([0003f](https://github.com/Forsakringskassan/rimfrost-framework-regel-oul-openapi/commit/0003f73982bf6fc) renovate[bot])  
+### Other changes
+
+**Add bearer auth security scheme and 401/403 responses**
+
+
+[fae68](https://github.com/Forsakringskassan/rimfrost-framework-regel-oul-openapi/commit/fae689ecd87db0a) Ulf Slunga *2026-10-07 08:37:07*
+
+
 ## 0.0.4 (2026-10-09)
 
 ### Bug Fixes
